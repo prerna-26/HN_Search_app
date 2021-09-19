@@ -103,11 +103,14 @@ class _DetailsScreenState extends State<DetailsScreen> {
                                   color: Colors.grey,
                                   width: 2,
                                 )),
-                                child: Text(
-                                  detailsData['children'][index]['text'],
-                                  style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 19,
+                                child: Padding(
+                                  padding: const EdgeInsets.all(15.0),
+                                  child: Text(
+                                    detailsData['children'][index]['text'],
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 19,
+                                    ),
                                   ),
                                 ),
                               ),
