@@ -105,53 +105,51 @@ class _DetailsScreenState extends State<DetailsScreen> {
                                   width: 2,
                                 )),
                                 child: Html(
-                                  data: detailsData['children'][index]['text']
-                                      .toString(),
-                                  style: {
-                                    "h2": Style(
-                                      color: Colors.white,
-                                    ),
-                                    "h3": Style(
-                                      color: Colors.white,
-                                    ),
-                                    "h4": Style(
-                                      color: Colors.white,
-                                    ),
-
-                                    "h1": Style(
-                                      color: Colors.white,
-                                    ),
-                                    "p": Style(
-                                      border: Border(
-                                          bottom:
-                                              BorderSide(color: Colors.grey)),
-                                      padding: const EdgeInsets.all(16),
-                                      fontSize: FontSize.larger,
-                                      // backgroundColor: Colors.white,
-                                      color: Colors.white,
-                                    ),
-                                    "p > a": Style(
-                                      textDecoration: TextDecoration.none,
-                                    ),
-                                    "#footer": Style(
-                                      display: Display.BLOCK,
-                                      whiteSpace: WhiteSpace.PRE,
-                                      backgroundColor:
-                                          Theme.of(context).primaryColor,
-                                      fontWeight: FontWeight.bold,
-                                    ),
-                                 
-                                child: Padding(
-                                  padding: const EdgeInsets.all(15.0),
-                                  child: Text(
-                                    detailsData['children'][index]['text'],
-                                    style: TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 19,
-                                    ),
-                           ),
-
-                                ),
+                                    data: detailsData['children'][index]['text']
+                                        .toString(),
+                                    style: {
+                                      "h2": Style(
+                                        color: Colors.white,
+                                      ),
+                                      "h3": Style(
+                                        color: Colors.white,
+                                      ),
+                                      "h4": Style(
+                                        color: Colors.white,
+                                      ),
+                                      "h1": Style(
+                                        color: Colors.white,
+                                      ),
+                                      "p": Style(
+                                        border: Border(
+                                            bottom:
+                                                BorderSide(color: Colors.grey)),
+                                        padding: const EdgeInsets.all(16),
+                                        fontSize: FontSize.larger,
+                                        // backgroundColor: Colors.white,
+                                        color: Colors.white,
+                                      ),
+                                      "p > a": Style(
+                                        textDecoration: TextDecoration.none,
+                                      ),
+                                      "#footer": Style(
+                                        display: Display.BLOCK,
+                                        whiteSpace: WhiteSpace.PRE,
+                                        backgroundColor:
+                                            Theme.of(context).primaryColor,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    }),
+                                //  Padding(
+                                //   padding: const EdgeInsets.all(15.0),
+                                //   child: Text(
+                                //     detailsData['children'][index]['text'],
+                                //     style: TextStyle(
+                                //       color: Colors.white,
+                                //       fontSize: 19,
+                                //     ),
+                                //   ),
+                                // ),
                               ),
                             ),
                           ),
