@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_html/flutter_html.dart';
 import 'package:http/http.dart' as http;
 
 class DetailsScreen extends StatefulWidget {
@@ -103,12 +104,43 @@ class _DetailsScreenState extends State<DetailsScreen> {
                                   color: Colors.grey,
                                   width: 2,
                                 )),
-                                child: Text(
-                                  detailsData['children'][index]['text'],
-                                  style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 19,
-                                  ),
+                                child: Html(
+                                  data: detailsData['children'][index]['text']
+                                      .toString(),
+                                  style: {
+                                    "h2": Style(
+                                      color: Colors.white,
+                                    ),
+                                    "h3": Style(
+                                      color: Colors.white,
+                                    ),
+                                    "h4": Style(
+                                      color: Colors.white,
+                                    ),
+
+                                    "h1": Style(
+                                      color: Colors.white,
+                                    ),
+                                    "p": Style(
+                                      border: Border(
+                                          bottom:
+                                              BorderSide(color: Colors.grey)),
+                                      padding: const EdgeInsets.all(16),
+                                      fontSize: FontSize.larger,
+                                      // backgroundColor: Colors.white,
+                                      color: Colors.white,
+                                    ),
+                                    "p > a": Style(
+                                      textDecoration: TextDecoration.none,
+                                    ),
+                                    "#footer": Style(
+                                      display: Display.BLOCK,
+                                      whiteSpace: WhiteSpace.PRE,
+                                      backgroundColor:
+                                          Theme.of(context).primaryColor,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  },
                                 ),
                               ),
                             ),

@@ -73,6 +73,7 @@ class _SearchPageState extends State<SearchPage> {
                           children: [
                             GestureDetector(
                               onTap: () {
+                                
                                 Navigator.push(
                                   context,
                                   MaterialPageRoute(
