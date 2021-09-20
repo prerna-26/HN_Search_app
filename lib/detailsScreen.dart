@@ -3,7 +3,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter_html/flutter_html.dart';
 import 'package:http/http.dart' as http;
-
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 class DetailsScreen extends StatefulWidget {
   final String objectID;
   DetailsScreen({required this.objectID});
@@ -33,8 +33,12 @@ class _DetailsScreenState extends State<DetailsScreen> {
 
   @override
   Widget build(BuildContext context) {
+    const spinkit = SpinKitThreeBounce(
+  color: Colors.white,
+  size: 50.0,
+);
     return loading
-        ? CircularProgressIndicator()
+        ?spinkit
         : Scaffold(
             appBar: AppBar(
               backgroundColor: Colors.purple[300],
@@ -58,6 +62,7 @@ class _DetailsScreenState extends State<DetailsScreen> {
                 SizedBox(
                   height: 15,
                 ),
+                
                 Text(
                   ('Points - ${detailsData['points']}').toString(),
                   style: TextStyle(
@@ -104,7 +109,8 @@ class _DetailsScreenState extends State<DetailsScreen> {
                                   color: Colors.grey,
                                   width: 2,
                                 )),
-                                child: Html(
+                                child:detailsData['points']!=null? 
+                                Html(
                                     data: detailsData['children'][index]['text']
                                         .toString(),
                                     style: {
@@ -139,7 +145,7 @@ class _DetailsScreenState extends State<DetailsScreen> {
                                             Theme.of(context).primaryColor,
                                         fontWeight: FontWeight.bold,
                                       ),
-                                    }),
+                                    }):null
                                 //  Padding(
                                 //   padding: const EdgeInsets.all(15.0),
                                 //   child: Text(
