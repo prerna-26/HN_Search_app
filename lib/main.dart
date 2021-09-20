@@ -11,10 +11,11 @@ class RestaurantSearchApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Search App',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-        scaffoldBackgroundColor: Colors.black45,
-      ),
+      theme: ThemeData.dark(),
+      // ThemeData(
+      //   primarySwatch: Colors.blue,
+      //   scaffoldBackgroundColor: Colors.black45,
+      // ),
       home: SearchPage(title: 'Search Page'),
     );
   }
